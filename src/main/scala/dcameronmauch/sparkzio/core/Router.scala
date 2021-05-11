@@ -1,0 +1,16 @@
+package dcameronmauch.sparkzio.core
+
+import dcameronmauch.sparkzio.common.Type.AppZIO
+import dcameronmauch.sparkzio.resource.config.Config
+import zio.ZIO
+
+object Router {
+  def apply(): AppZIO = ZIO.accessM {
+    _.get[Config.Service].action.flatMap {
+      case "Thing2" =>
+        println("core thing 2")
+        ZIO.succeed(())
+      case _ => throw new IllegalArgumentException("action invalid")
+    }
+  }
+}

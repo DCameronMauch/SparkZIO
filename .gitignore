@@ -1,0 +1,27 @@
+# bloop and metals
+.bloop
+.bsp
+.metals
+
+# vs code
+.vscode
+
+# sbt
+bin/
+project/target/
+target/
+build/
+
+# intellij idea
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+
+# mac
+.DS_Store
+
+# spark
+spark-data-int/
+spark-data-string/
